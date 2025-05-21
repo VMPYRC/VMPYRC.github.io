@@ -2,4 +2,4 @@
 
 + [Source Code](https://github.com/VMPYRC/VMPYRC.github.io/)
 + [VMPYRC'S LAB](https://vmpyrc.github.io/LAB/)
-+ [Quartz](https://vmpyrc.github.io/Quartz/)
++ [Quartz](https://vmpyrc.github.io/quartz/)
