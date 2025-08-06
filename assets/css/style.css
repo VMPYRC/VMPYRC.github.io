@@ -1,0 +1,116 @@
+html,
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 100%;
+  padding: 1px;
+}
+
+.gradient-btn {
+  animation: dreamyGradient 15s ease infinite;
+  background: linear-gradient(45deg, #00ffff, #9900ff, #ff0080);
+  background-size: 400% 400%;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  margin: 5px;
+  padding: 5px 20px;
+  text-decoration: none;
+  width: auto;
+}
+
+.gradient-btn:hover {
+  animation: dreamyGradient 3s ease infinite;
+  background: linear-gradient(to right, #ff0080, #9900ff, #00ffff);
+  background-size: 400% 400%;
+  color: #ffffff;
+}
+
+hr {
+  background-color: #ffffff;
+  border: 0;
+  height: 2px;
+  margin: 20px auto;
+  width: 20%;
+}
+
+@keyframes dreamyGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.link-btn {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  width: 50px;
+}
+
+.link-btn:focus::after {
+  opacity: 0;
+}
+
+.link-btn:hover {
+  transform: scale(1.3);
+}
+
+.link-btn[data-tooltip] {
+  position: relative;
+}
+
+.link-btn[data-tooltip]::after {
+  background-color: #ffffff;
+  border-radius: 10px;
+  bottom: 100%;
+  color: #000000;
+  content: attr(data-tooltip);
+  left: 50%;
+  margin-bottom: 10px;
+  opacity: 0;
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.link-btn[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
+.social-icon {
+  height: 35px;
+  width: 35px;
+}
